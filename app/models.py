@@ -41,7 +41,7 @@ class Pitch(db.Model):
 
     id = db.Column(db.Integer,primary_key = True)    
     title = db.Column(db.String(255),index = True)
-    content = db.Column(db.String(255),unique = True,index = True)
+    content = db.Column(db.String(255),index = True)
     user = db.Column(db.Integer,db.ForeignKey('users.id'))       
     category = db.Column(db.Integer,db.ForeignKey('categorys.id'))       
     votes = db.Column(db.Integer,nullable=True)    

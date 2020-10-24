@@ -7,17 +7,25 @@
 
 <div class="container">
 	<div class="row">
-	    <div class="container">
+	    <div class="container">Available Categories:
+            {%for category in categories%}
+            <a class="" href="#"><span class="badge badge-secondary">{{category.name}}</span> </a>
+            
+            {%endfor%}
+            {%for pitch in pitches%}
             <blockquote class="quote-card">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                {{pitch.content}} 
               </p>
         
-              <cite>
-                Lorem I psum
+              <cite> <span><p>Title:{{pitch.title}}</p></span>
+                <span><p>Category:{{pitch.category}}</p></span>
+                
               </cite>
             </blockquote>
-        
+            {%endfor%}
+
+           
      
 
         
