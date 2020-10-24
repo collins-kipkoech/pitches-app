@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/quotes.css')}}">
+{% endblock %}
 {% block content %}
+
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8"></div>
-        <div class="col-lg-4">
-            <form action="" method="POST">
-                <label for="username">Username:</label><br>
-                <input type="text" name="username"><br>
-                <label for="email">Email:</label><br>
-                <input type="text" name="email"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" name="password"><br>
-                <input type="submit" value="Submit">
-            </form>
+	<div class="row">
+	    <div class="container">
+            <blockquote class="quote-card">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              </p>
+        
+              <cite>
+                Lorem I psum
+              </cite>
+            </blockquote>
+        
+     
+
+        
         </div>
-    </div>
+	</div>
 </div>
 
 {% endblock %}

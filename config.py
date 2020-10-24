@@ -1,13 +1,15 @@
+import os
 class Config:
+
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
+class ProdConfig(Config):
+
     pass
 
-
-class ProdConfig:
-
-    pass
-
-class DevConfig:
-    pass
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:colo1234@localhost/pitch'
 
 
 config_options ={
