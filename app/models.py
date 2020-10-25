@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask_login import UserMixin
 
 from . import db, login_manager
@@ -14,8 +16,9 @@ class User(UserMixin,db.Model):
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
     pass_secure = db.Column(db.String(255))
-    picth = db.relationship('Pitch',backref = 'pitch',lazy="dynamic")
-
+    pitch = db.relationship('Pitch',backref = 'pitch',lazy="dynamic")
+    about_me = db.Column(db.String(140))
+    profile_pic_path = db.Column(db.String())
     # @property
     # def password(self):
     #     raise AttributeError('You cannnot read the password attribute')
@@ -29,6 +32,14 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+class Comment(db.Model):
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer,primary_key = True)     
+    text = db.Column(db.String(255),index = True)        
+    pitch = db.Column(db.Integer,db.ForeignKey('pitches.id'))       
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    
 class Category(db.Model):
     __tablename__ = 'categorys'
 
@@ -45,3 +56,6 @@ class Pitch(db.Model):
     user = db.Column(db.Integer,db.ForeignKey('users.id'))       
     category = db.Column(db.Integer,db.ForeignKey('categorys.id'))       
     votes = db.Column(db.Integer,nullable=True)    
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    comment = db.relationship('Comment',backref = 'comment_ pitch',lazy="dynamic")
+
