@@ -46,3 +46,19 @@ def category():
 
 
     return render_template("category.html")
+@main.route('/category', methods=['GET', 'POST'])
+@login_required
+
+def upvote():
+    name= request.args.get('name')
+    # import pdb; pdb.set_trace()
+    if name != None:
+        new_category = Category(name=name)
+        
+        db.session.add(new_category)
+        db.session.commit()
+        flash('Category created successfully!')
+        return redirect(url_for('.pitch'))
+
+
+    return render_template("category.html")

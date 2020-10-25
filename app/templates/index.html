@@ -19,8 +19,9 @@
               </p>
         
               <cite> <span><p>Title:{{pitch.title}}</p></span>
-                <span><p>Category:{{pitch.category}}</p></span>
-                
+                <span><a href="{{ url_for('main.upvote') }}"><i class="fas fa-thumbs-up"></i></a></span>
+                <span>{{pitch.votes}} </span>
+                <span><a href="{{ url_for('main.downvote') }}"><i class="fas fa-thumbs-down"></i></a></span>
               </cite>
             </blockquote>
             {%endfor%}
