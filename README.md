@@ -37,7 +37,7 @@ User Guide
 8. click on edit profile to update your profile details
 
 
-
+[MIT](LICENSE.md)©
 
 Contact information 
 
