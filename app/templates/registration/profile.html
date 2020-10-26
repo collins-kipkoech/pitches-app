@@ -22,9 +22,7 @@
            
             <div class="col-2">
                 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary profile-edit-btn"  data-toggle="modal" data-target="#exampleModalCenter">
-   Edit Profile
-  </button>
+
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -83,13 +81,20 @@
                         <li class="nav-item">
                           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#timeline" role="tab" aria-controls="profile" aria-selected="false">My Timeline</a>
                         </li>
+                       <li>
+                        <button type="button" class="btn btn-primary profile-edit-btn"  data-toggle="modal" data-target="#exampleModalCenter">
+                          Edit Profile
+                         </button>
+                       </li>
                       </ul>
                       <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="jumbotron jumbotron-fluid">
                                 <div class="container">
                                     <h5>
-                                        username:{{current_user.username}}
+                                        username:{{current_user.username}}<br>
+                                        Email:{{current_user.email}}
+                                        
                                     </h5>
                                     <h4>Bio <span><i class="fas fa-hand-point-down"></i></span></h4>
                                     <blockquote style="margin-left: 2%;" class="blockquote d-flex justify-content-left">
