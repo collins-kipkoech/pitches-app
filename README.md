@@ -37,11 +37,11 @@ User Guide
 8. click on edit profile to update your profile details
 
 
-[MIT](LICENSE.md)©
+
 
 Contact information 
 
 Email address: collinskipkoech95@gmail.com
 
 
-
+[MIT](LICENSE.md)©
