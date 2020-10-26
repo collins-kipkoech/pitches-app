@@ -13,7 +13,7 @@ def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = RegistrationForm()
-    # import pdb; pdb.set_trace() 
+    
     if form.validate_on_submit():
         print('work')
         user = User(username=form.username.data, email=form.email.data)
@@ -49,7 +49,7 @@ def logout():
 def edit_profile():
     form = EditProfileForm()
     pitches=Pitch.query.filter_by(user=current_user.id)
-    # import pdb; pdb.set_trace()
+    
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data

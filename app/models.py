@@ -19,9 +19,7 @@ class User(UserMixin,db.Model):
     pitch = db.relationship('Pitch',backref = 'pitch',lazy="dynamic")
     about_me = db.Column(db.String(140))
     profile_pic_path = db.Column(db.String())
-    # @property
-    # def password(self):
-    #     raise AttributeError('You cannnot read the password attribute')
+ 
 
     def set_password(self, password):
         self.pass_secure = generate_password_hash(password)
