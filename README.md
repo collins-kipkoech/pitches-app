@@ -6,7 +6,7 @@ Pitches app is simple application that allow users to use a minute given to impr
 
 links
 
-active link:
+active link: https://collins-pitches-app.herokuapp.com/
 
 figma link:  https://www.figma.com/file/mRgN8yFbMcaqa8pQWg22Bo/pitches-app?node-id=0%3A1
 
