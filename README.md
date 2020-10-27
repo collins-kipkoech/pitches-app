@@ -28,7 +28,7 @@ Installation
 User Guide
 
 1. click on the active link to view the live website
-2. click on sign up to create account by providing requested information
+2. click on sign up to create account by providing requested information; an email will be send to your provided email as a notification
 3. click sign in to login; use your name and password to login
 4. click on create category to create one
 5. click on post pitch and enter details; remember to select the category you created on the dropdown menu and click submit to post pitch
