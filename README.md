@@ -8,7 +8,7 @@ links
 
 active link: https://collins-pitches-app.herokuapp.com/
 
-figma link:  https://www.figma.com/file/mRgN8yFbMcaqa8pQWg22Bo/pitches-app?node-id=0%3A1
+figma link:  https://www.figma.com/proto/mRgN8yFbMcaqa8pQWg22Bo/pitches-app?node-id=2%3A11&scaling=min-zoom
 
 screenshots
 
